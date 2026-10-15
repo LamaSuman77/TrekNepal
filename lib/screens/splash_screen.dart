@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:untitled/widgets/net_image.dart';
 import '../widgets/net_images.dart';
+import 'home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -67,9 +68,12 @@ class SplashScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(26),
                         ),
                       ),
-                      onPressed: () {
-                        // TODO: Step 5 - navigate to HomeScreen
-                      },
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (_) => const HomeScreen()),
+                          );
+                        },
                       icon: const Icon(Icons.arrow_forward, size: 18),
                       label: const Text(
                         'Get Started',
